@@ -8,3 +8,7 @@ This is a hello world Electron application that is setup to debug both the main 
 * Add a breakpoint into renderer.js
 * Add a breakpoint into main.js (e.g. the event handler when the window closes)
 * Start the debugger (F5)
+
+# Demo
+
+![untitled](https://cloud.githubusercontent.com/assets/900690/24273354/1d8173d4-0fdf-11e7-975e-2629ee5a5543.gif)
