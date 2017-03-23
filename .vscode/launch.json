@@ -4,29 +4,37 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-{
-    "type": "chrome",
-    "request": "launch",
-    "name": "Launch Electron",
-    "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
-    "runtimeArgs": [
-        "${workspaceRoot}",
-        "--debug=9876"
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "linux": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron"
+            },
+            "osx": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron"
+            },
+            "runtimeArgs": [
+                "${workspaceRoot}",
+                "--debug=9876"
+            ],
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Main",
+            "port": 9876,
+            "protocol": "legacy"
+        }
     ],
-    "webRoot": "${workspaceRoot}"
-},
-{
-    "type": "node",
-    "request": "attach",
-    "name": "Attach to Main",
-    "port": 9876,
-    "protocol": "legacy"
-}
-    ],
-"compounds": [
-    {
-        "name": "Electron",
-        "configurations": ["Launch Electron", "Attach to Main"]
-    }
+    "compounds": [
+        {
+            "name": "Electron",
+            "configurations": ["Launch Electron", "Attach to Main"]
+        }
 ]
 }
