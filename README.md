@@ -58,3 +58,7 @@ And the second configuration is attaching to the main process via the node debug
 # Demo
 
 ![untitled](https://cloud.githubusercontent.com/assets/900690/24273354/1d8173d4-0fdf-11e7-975e-2629ee5a5543.gif)
+
+# Troubleshooting
+
+* make sure you close all Electron windows before debugging again, otherwise the node attach will timeout
