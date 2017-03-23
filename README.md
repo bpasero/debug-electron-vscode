@@ -43,7 +43,7 @@ The configuration to launch electron is leveraging the chrome debug adapter we i
 }
 ```
 
-And the second configuration is attaching to the main process via the node debug adapter:
+And the second configuration is attaching to the main process via the node debug adapter on the provided port (`--debug=9876`):
 
 ```json
 {
